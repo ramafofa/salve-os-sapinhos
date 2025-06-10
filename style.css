@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(source.gif);
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: #047a00;
+    margin: 20px 0;
+    padding: 20px;
+    background-color:  aliceblue;
+    border-radius: 35px;
+    font-size: 30px;
+}
+.flutuando {
+    display: inline-block;
+    animation: flutuar 2s ease-in-out infinite;
+  }
+
+@keyframes flutuar {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+p{
+    margin: 20px 0;
+    color: #05a000;
+    font-size: 20px;
+    background-color: aliceblue;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.neutralArea {
+    width: 450px;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.sapo {
+    width: 100px;
+    height: 100px;
+    position: static;
+    transform: translate(-10%, -20%); /* ajusta menos no Y */
+    cursor: grab;
+    z-index: 10;
+    
+}
+.sapo .dragging {
+    width: 100px;
+    height: 100px;
+}
+.areas {
+    width: 450px;
+    display: flex;
+    
+}
+.areas.correct .area {
+    border: 2px solid #00FF00;
+
+}
+@keyframes boiar {
+    0%, 100% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+  }
+.folha {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+   animation: boiar 3s infinite ease-in-out;
+}
+
+.folha .sapo {
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+.folha img{
+    width: 100%;
+    height: auto;
+    display: block;
+   
+}
+.hover {
+    background-color: rgba(0, 26, 143, 0.377);
+    border-radius: 100px;
+}
+footer {
+    margin-top: 20px;
+    color: #047a00;
+    font-size: 18px;
+    background-color: aliceblue;
+    border-radius: 30px;
+    padding: 15px;
+}
